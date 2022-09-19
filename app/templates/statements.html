@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SQL Statements
+{% endblock title %}
+
+{% block content %}
+    <h1>SQL statements associated with CRUD operations.</h1>
+    <div class="container" style="margin-top: 30px;">
+      <h4>SQL statement for create a new resource</h4>
+      <p>The first letter of CRUD, 'C', refers to CREATE. In this operation, we use SQL INSERT INTO statement to insert a new record.t</p>
+
+      <h5>Examples:</h5>
+      <p>INSERT INTO "table_name" (column1, column2, ...)</p>
+      <p>VALUES (value1, value2, ...)</p>
+
+
+      <p>INSERT INTO persons (f_name, l_name, ...)</p>
+      <p>VALUES ("Eduardo", "Reynoso", ...)</p>
+
+      <p><i>We use this statement to add a new resource to a table named persons, we need to indicate what attributes we going to add with each values.</i></p>
+    </div>  
+
+
+    <div class="container">
+      <h4>SQL statement for read a resource</h4>
+      <p>The second letter of CRUD, 'R', refers to READ. In this operation, we use SQL SELECT statement to retrieve data or record-set from a listed table.</p>
+
+      <h5>Examples:</h5>
+      <p>SELECT * FROM 'TableName'</p>
+
+
+      <p>SELECT * FROM persons</p>
+      <p>SELECT * FROM persons WHERE f_name = "Eduardo"</p>
+
+      <p><i>We use this statement to read an existing resource from a table named 'persons', we need to indicate what are we going to read from that resource, in this case we use '*' to say that we are going to read every single attribute from every resource, we can specify what resource we want to desplegate using 'WHERE' and the attribute that we are going to use to filter the resource.</i></p>
+
+    </div>
+
+
+    <div class="container">
+      <h4>SQL statement for update a resource</h4>
+      <p>The third letter of CRUD, 'U', refers to UPDATE. In this operation, we use SQL UPDATE statement to bring a change to an existing record(s) of the table.</p>
+
+      <h5>Examples:</h5>
+      <p>UPDATE 'TableName'</p>
+      <p>SET Column1=Value1, Column2=Value2,...</p>
+      <p>WHERE 'Expression'</p>
+
+
+      
+      <p>UPDATE persons</p>
+      <p>SET f_name="Rodrigo", l_name="Perez",...</p>
+      <p>WHERE name=?</p>
+
+      <p><i>We use this statement to update an existing resource from a table named 'persons', we neeed to indicate what attributes are we going to change with each new value, and we need to indicate what resource is with 'WHERE'.</i></p>
+
+    </div>
+
+
+    <div class="container">
+      <h4>SQL statement for delete a resource</h4>
+      <p>The last letter of CRUD, 'D', refers to DELETE. In this operation, we use SQL DELETE statement to delete the record(s) from the table.</p>
+
+      <h5>Examples:</h5>
+      <p>DELETE FROM 'TableName'</p>
+      <p>WHERE 'Expression'</p>
+
+
+      
+      <p>DELETE FROM persons</p>
+      <p>WHERE name=?</p>
+
+
+      <p><i>We use this statement to delte an existing resource from a table named 'persons', we need to indicate what resource are we going to delete with 'WHERE'.</i></p>
+    </div>
+    
+
+    
+
+    <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Difference #</th>
+            <th scope="col">Object</th>
+            <th scope="col">Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Object is an instance of a class.</td>
+            <td>Class is a bluprint or template from which objects are created.</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>An object is a physical entity.</td>
+            <td>Class is a logical entity.</td> 
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Object is allocated memory when created.</td>
+            <td>Class does not allocate any memory when created.</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Object is a specific entity.</td>
+            <td>Class is a group of identical objects.</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>A class can have any number of instances or objects.</td>
+            <td>The class can be declared only once.</td>
+          </tr>
+        </tbody>
+      </table> -->
+{% endblock content %}
